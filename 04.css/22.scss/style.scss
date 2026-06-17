@@ -1,0 +1,51 @@
+// variables
+// inheritance
+// calculation
+// mixins/functions
+
+$blue: #1c97d9;
+$buttonBg: #0d6913;
+$boderRadius: 12px;
+
+body {
+    background-color: $blue;
+}
+
+h1 {
+    color: $blue;
+    background-color: $buttonBg;
+    font-family: sans-serif;
+    border-radius: $boderRadius;
+    display: inline-block;
+    width: calc(100vw - 400px);
+}
+
+.my-container {
+    background-color: orange;
+    padding: 2em;
+
+    h1 {
+        background-color: yellow;
+    }
+
+    p {
+        background-color: pink;
+    }
+
+}
+
+@mixin basicInput($bgColor, $color, $padding) {
+    border-radius: 1em;
+    background-color: $bgColor;
+    color: $color;
+    border: 2px solid skyblue;
+    padding: $padding;
+}
+
+input {
+    @include basicInput(#fff, black, 0.5em);
+}
+
+button {
+    @include basicInput(#096e09, white, 1em);
+}

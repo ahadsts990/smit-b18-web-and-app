@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Redressed';
+    src: url('../fonts/Redressed-Regular.ttf');
+}
+
+*{
+    font-family: "Redressed", sans-serif;
+}
+
+body{
+    background-color: rgb(238, 238, 238);
+}
+
+h1{
+    color: rgb(7, 71, 17);
+}
+
+h2{
+    color: rgb(78, 11, 20);
+}
+
+a{
+    color: rgb(64, 67, 8);
+}
+
+p{
+    color: rgb(44, 42, 42);
+    font-size: 1.2em;
+}

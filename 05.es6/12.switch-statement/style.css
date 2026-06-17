@@ -1,0 +1,26 @@
+*{
+    font-family: "Outfit", sans-serif;
+    text-transform: capitalize;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    background-image: url("./background.avif");
+    height: 100vh;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}
+
+h3{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 8px black;
+}

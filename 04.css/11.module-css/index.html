@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+
+    <!-- css -->
+    <style>
+        :root {
+            --light-color: #0099ff;
+            --dark-color: #7f0b1d;
+            --padding: 1em;
+            --normal: sans-serif;
+        }
+
+        button {
+            background-color: var(--light-color);
+            padding: var(--padding);
+            color: var(--dark-color);
+            border-color: var(--dark-color);
+            font-family: var(--normal);
+        }
+
+        h1 {
+            color: var(--dark-color);
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+
+            20% {
+                transform: translateX(-10px);
+            }
+
+            40% {
+                transform: translateX(20px);
+            }
+
+            60% {
+                transform: translateX(-15px);
+            }
+
+            80% {
+                transform: translateX(50px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        /* Apply the animation */
+        .shake {
+            animation: shake 10s ease-in-out;
+        }
+
+        button:hover {
+            animation: shake 10s ease-in-out;
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+
+        .my-icon {
+            color: red;
+        }
+
+        .fa-square-whatsapp {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>I am button</button>
+
+    <h1 class="animate__animated animate__rotateOut">I am heading</h1>
+
+    <i class="fa-solid fa-building-columns my-icon"></i>
+    
+    <a href="https://wa.me/+923130019086" target="_blank">
+        <i class="fa-brands fa-square-whatsapp"></i>
+    </a>
+
+    <i class="fa-solid fa-bars"></i>
+    <i class="fa-solid fa-house"></i>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h2>Upload Video</h2>
+
+    <form onsubmit="uploadVideo(event)">
+
+        <input id="title" placeholder="Title">
+        <br />
+        <br />
+        <textarea id="description" placeholder="description"></textarea>
+        <br />
+        <br />
+
+        <!-- FILE INPUTS -->
+        <label>Thumbnail:</label>
+        <input type="file" id="thumbnail" accept="image/*">
+
+        <br />
+        <br />
+
+        <label>Video:</label>
+        <input type="file" id="videoFile" accept="video/*">
+
+        <br />
+        <br />
+
+        <select id="status">
+            <option value="public">Public</option>
+            <option value="private">Private</option>
+        </select>
+
+
+        <br />
+        <br />
+
+        <button>Upload</button>
+    </form>
+
+    <script src="js/storage.js"></script>
+    <script src="js/video.js"></script>
+
+</body>
+
+</html>

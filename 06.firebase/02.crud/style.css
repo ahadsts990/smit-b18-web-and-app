@@ -1,0 +1,24 @@
+*{
+    font-family: sans-serif;
+    text-transform: capitalize;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+input, textarea, button{
+    padding: 0.5em ;
+}
+
+.post{
+    border: 1px solid black;
+    padding: 1em;
+    margin: 0.5em 0;
+}
+
+.post>div{
+    margin-top: 0.8em;
+}

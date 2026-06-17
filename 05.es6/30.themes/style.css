@@ -1,0 +1,32 @@
+.yellow{
+    color: rgb(81, 81, 1);
+    background-color: yellow;
+}
+
+.red{
+    color: rgb(74, 3, 3);
+    background-color: rgb(255, 130, 130);
+}
+
+.blue{
+    color: rgb(0, 0, 73);
+    background-color: rgb(87, 87, 245);
+}
+
+.green{
+    color: darkgreen;
+    background-color: lightgreen;
+}
+
+.orange{
+    color: rgb(143, 95, 6);
+    background-color: rgb(255, 213, 135);
+}
+
+.my-btns{
+    display: none;
+}
+
+.red-btn{
+    display: block;
+}

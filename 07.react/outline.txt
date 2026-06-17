@@ -1,0 +1,24 @@
+app creation                DONE
+app running                 DONE
+folder structure            DONE
+picture/video               DONE
+deployment (surge, vercel)  DONE
+package installation        DONE
+scss                        DONE
+fonts                       DONE
+icons                       DONE
+components                  DONE
+props                       DONE
+
+hooks
+virtual DOM
+firebase/supabase
+env variables
+api call
+routing
+redux
+UI libraries
+optimization hooks
+protected routes
+tailwind
+typescript

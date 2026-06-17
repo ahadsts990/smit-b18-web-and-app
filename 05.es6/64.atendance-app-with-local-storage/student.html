@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="loadProfile()">
+    <h1>Student Dashboard</h1>
+    <button onclick="logout()">Logout</button>
+    <input type="file" id="imgInput" accept="image/*">
+
+    <div id="profile"></div>
+
+    <button onclick="uploadImage()">Upload Picture</button>
+
+    <button onclick="editProfile()">Edit Profile</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/student.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

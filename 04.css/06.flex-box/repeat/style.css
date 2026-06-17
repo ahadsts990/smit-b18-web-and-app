@@ -1,0 +1,22 @@
+.dabba{
+    background-color: red;
+    height: 400px;
+    width: 1500px;
+    display: flex;
+    gap: 2em;
+    /* row-gap: 2em;
+    column-gap: 6em; */
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.hussain{
+    background-color: green;
+    height: 100px;
+    width: 100px;
+    color: white;
+    text-align: center;
+}

@@ -1,0 +1,54 @@
+h1{
+    color: red;
+}
+
+body{
+background: #0b5078;
+background: linear-gradient(0deg, rgba(11, 80, 120, 1) 56%, rgba(38, 135, 3, 1) 100%);
+}
+
+i{
+    color: #0099ff; // 0 to E ==> (0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f)
+}
+
+a{
+    color: rgb(255, 255 ,255); // 0 to 256 ====> around 16 million
+}
+
+#head1{
+    /* color:  rgb(255,0,0); */
+    /* color:  rgb(0,255,0); */
+    /* color:  rgb(0,0,255); */
+    color:  rgb(11, 144, 226);
+}
+
+#head2{
+    /* color: #ff0000; */
+    /* color: #00ff00; */
+    /* color: #0000ff; */
+    color: #582c09;
+}
+
+h1#my-head-1{
+    color: rgba(127, 69, 15, 0.622);
+}
+
+h1#my-head-12{
+    color: rgb(127, 69, 15);
+}
+
+h1#my-head-2{
+    color: #24bf9e91;
+}
+
+h1#my-head-22{
+    color: #759343;
+}
+
+h1#my-head-3{
+    color: hsla(359, 44%, 26%, 0.5);
+}
+
+h1#my-head-32{
+    color: hsl(359, 44%, 26%);
+}

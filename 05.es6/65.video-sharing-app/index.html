@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1>Home</h1>
+
+    <button onclick="logout()">Logout</button>
+    <a href="upload.html">Upload</a>
+    <a href="profile.html">Profile</a>
+
+    <input id="search" placeholder="Search">
+    <button onclick="handleSearch()">Search</button>
+
+    <div id="videos"></div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/video.js"></script>
+
+    <script>
+        function handleSearch() {
+            let q = search.value.toLowerCase();
+            let videos = getData("videos");
+
+            let filtered = videos.filter((v) => {
+                return v.title.toLowerCase().includes(q)
+            });
+            renderVideos(filtered);
+        }
+
+        renderVideos();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Managment System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <h1>Student Management System With DOM</h1>
+
+    <form>
+        <fieldset>
+            <legend>Admission Form</legend>
+            <input required type="text" placeholder="Student Name" class="name" />
+            <input required type="text" placeholder="Father Name" class="father" />
+            <input required type="number" placeholder="Roll No" class="roll_no" />
+            <input required type="text" placeholder="Section" class="section" />
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+
+    <table class="output" border="1">
+        <tr>
+            <th>Student Name</th>
+            <th>Father Name</th>
+            <th>Roll No</th>
+            <th>Section</th>
+        </tr>
+        <tr>
+            <td>Junaid</td>
+            <td>Khan</td>
+            <td>134</td>
+            <td>34</td>
+        </tr>
+    </table>
+
+    <script src="main.mjs"></script>
+</body>
+
+</html>

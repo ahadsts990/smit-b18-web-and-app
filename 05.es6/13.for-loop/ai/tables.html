@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Table Printer</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --bg: #f5f7ff;
+      --card: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: var(--primary);
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s ease, opacity 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .output {
+      margin-top: 25px;
+      background: #f9fafb;
+      padding: 15px;
+      border-radius: 8px;
+      min-height: 50px;
+    }
+
+    .row {
+      font-size: 16px;
+      padding: 4px 0;
+    }
+
+    .error {
+      color: crimson;
+      font-weight: 600;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Table Printer</h1>
+
+    <form id="tableForm">
+      <div>
+        <label>Which Table?</label>
+        <input type="number" id="tableNumber" placeholder="e.g. 5" required />
+      </div>
+
+      <div>
+        <label>Start Position</label>
+        <input type="number" id="start" placeholder="e.g. 1" required />
+      </div>
+
+      <div>
+        <label>End Position</label>
+        <input type="number" id="end" placeholder="e.g. 10" required />
+      </div>
+
+      <button type="submit">Generate Table</button>
+    </form>
+
+    <div class="output" id="output"></div>
+  </div>
+
+  <script>
+    const form = document.getElementById("tableForm");
+    const output = document.getElementById("output");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const table = Number(document.getElementById("tableNumber").value);
+      const start = Number(document.getElementById("start").value);
+      const end = Number(document.getElementById("end").value);
+
+      output.innerHTML = "";
+
+      if (start > end) {
+        output.innerHTML = "<div class='error'>Start position must be less than or equal to end position.</div>";
+        return;
+      }
+
+      for (let i = start; i <= end; i++) {
+        const result = table * i;
+        output.innerHTML += `
+          <div class="row">
+            ${table} × ${i} = <strong>${result}</strong>
+          </div>
+        `;
+      }
+    });
+  </script>
+
+</body>
+</html>

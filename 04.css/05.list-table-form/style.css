@@ -1,0 +1,96 @@
+ul{
+    list-style-type: armenian;
+    list-style-type: circle;
+    list-style-type: decimal-leading-zero;
+    list-style-type: disc;
+    list-style-type: georgian;
+    list-style-type: lower-alpha;
+    list-style-type: lower-greek;
+    list-style-type: lower-latin;
+    list-style-type: lower-roman;
+    list-style-type: none;
+    list-style-type: decimal;
+    list-style-type: square;
+
+    background-color: red;
+
+    /* list-style-image: url("images/thirsty.jpeg"); */
+    list-style-position: inside;
+
+    list-style: inside decimal;
+}
+
+
+li{
+    background-color: green;
+}
+
+table{
+    width: 600px;
+    background-color: orange;
+    padding: 1em;
+    empty-cells: hide;
+    border-spacing: 8px;
+    border: 2px dashed red;
+    border-collapse: collapse;
+}
+
+td{
+    border: 2px solid green;
+}
+
+input{
+    outline: none;
+    padding: 1em;
+    margin: 1em;
+    background-color: lavenderblush;
+    border:0;
+    border-bottom: 2px solid grey;
+    border-radius: 1em;
+    color: orange;
+    accent-color: black;
+    cursor: auto;
+    cursor: crosshair;
+    cursor: default;
+    cursor: pointer;
+    cursor: move;
+    cursor: text;
+    cursor: wait;
+    cursor: help;
+    /* cursor: url("images/thirsty.jpeg") 20 20, ; deprecated */
+}
+
+input::placeholder{
+    color: red;
+}
+
+button{
+    outline: none;
+    padding: 1em;
+    margin: 1em;
+    background-color: rgb(159, 22, 67);
+    border: 2px dashed rgb(14, 156, 14);
+    border-radius: 0;
+    color: orange;
+}
+
+button:hover{
+    background-color: rgb(126, 8, 47);
+    border-radius: 1em;
+    border: 2px double rgb(14, 156, 14);
+}
+
+fieldset{
+    border: 8px double rgb(14, 156, 14);
+    border-radius: 1em;
+}
+
+legend{
+    color: orange;
+    background-color: red;
+    font-size: 2em;
+    border-radius: 12px;
+    background: black;
+    color: yellow;
+}
+

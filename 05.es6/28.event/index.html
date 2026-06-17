@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onmousemove="handle_mouse_move(event)">
+
+    <h1>Events</h1>
+
+    <textarea oninput="handle_code_change(event)"></textarea>
+    <p class="output"></p>
+
+    <br />
+    <br />
+
+    <p class="my_paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci architecto eaque laboriosam quod nobis, in
+        iusto ex ea odio dicta voluptatum dolores reiciendis similique corrupti maiores error tenetur recusandae cumque.
+    </p>
+
+    <button class="more-btn" onclick="see_more()">See More</button>
+    <button class="less-btn" onclick="see_less()">See Less</button>
+
+    <br />
+    <br />
+
+    <div class="password-input">
+        <input type="password" id="password-input" placeholder="enter your password" style="border: 0;outline: 0;">
+        <button class="show-btn" onclick="handle_password_show()"
+            style="border: 0; background-color: transparent; cursor: pointer;">
+            <i class="bi bi-eye-slash"></i>
+        </button>
+
+        <button class="hide-btn" onclick="handle_password_hide()"
+            style="border: 0; background-color: transparent; cursor: pointer;">
+            <i class="bi bi-eye"></i>
+        </button>
+    </div>
+
+    <br />
+    <br />
+
+
+    <button onclick="alert('hello world')">Click me</button>
+
+    <br />
+    <br />
+
+    <form onsubmit="submit_form(event)">
+
+        <input type="text" id="input" onchange="change_input(event)" oninput="input_text_change(event)"
+            onfocus="handle_focus(event)" onblur="handle_blur(event)" />
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <input type="text" oninput="handle_input_change(event)" autofocus />
+
+    <br />
+    <br />
+
+    <h1 onmouseover="handle_heading_mouse_over(event)" onmouseout="handle_heading_mouse_out(event)">hello world</h1>
+
+    <br />
+    <br />
+
+    <h1 class="my__heading"> hello iam h1 </h1>
+
+    <br />
+    <br />
+
+
+    <!-- soap image -->
+    <img src="./images/soap.png" class="thirsty-image" style="width: 50px; height: 50px;">
+
+    <img src="https://www.shutterstock.com/image-photo/soiled-dirty-muddy-white-t-600nw-2510520901.jpg"
+        onmouseout="handle_image_out(event)" onmouseover="handle_mouse_over(event)"
+        style="border: 1px solid black; width: 300px; height: 300px;" />
+
+    <script src="main.mjs"></script>
+</body>
+
+</html>

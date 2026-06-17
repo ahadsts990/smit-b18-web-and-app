@@ -1,0 +1,102 @@
+h1, b, u{
+    background-color: aqua;
+    color: orange;
+}
+
+*{
+    /* color: brown; */
+}
+
+.sufiyan{
+    color: darkgreen;
+}
+
+.nawab{
+    background-color: black;
+    color: yellow;
+}
+
+h1.nawab{
+    background-color: blueviolet;
+}
+
+#talha{
+    background-color: chocolate;
+}
+
+p#talha, h3#talha{
+    color: black;
+}
+
+h3#talha{
+    background-color: pink;
+}
+
+.my-container{
+    background-color: lime;
+}
+
+.my-container *{
+    color: red;
+}
+
+.my-container>p{
+color: khaki;
+}
+
+.my-container p{
+    background-color: cadetblue;
+}
+
+/* class 02 */
+
+#my-id{
+    color: blue;
+}
+
+#my-id + p{
+    color: purple;
+}
+
+#my-id ~ p{
+    background-color: black;
+    color: white;
+}
+
+input[type="text"]{
+    background-color: red;
+}
+
+input[type="email"]{
+    background-color: green;
+}
+
+input[name="faris"]{
+    background-color: blue;
+}
+
+input[name="rafay"]{
+    background-color: yellow;
+}
+
+.inputs{
+    background-color: orange;
+}
+
+h3{
+    background-color: aquamarine;
+}
+
+h3[name="headings"]{
+    color: black;
+}
+
+h1, p{
+    background-color: blue;
+    color: white;
+}
+
+.main-div{
+    color: red!important;
+    background-color: yellow!important;
+}

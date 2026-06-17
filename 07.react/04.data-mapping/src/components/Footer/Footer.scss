@@ -1,0 +1,55 @@
+@use "../../colors.scss" as *;
+
+.footer {
+    padding: 1em;
+    background-color: $black;
+    color: $cream;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+
+    .first-col {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        padding-right: 5em;
+
+        a {
+            all: unset;
+            color: $cream;
+            cursor: pointer;
+        }
+
+        .social-links {
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            font-size: 1.5em;
+
+            a{
+                all: unset;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    .footer-cols {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        
+        ul {
+            li {
+                list-style: none;
+                margin: 0.5em 0;
+
+                a {
+                    all: unset;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}

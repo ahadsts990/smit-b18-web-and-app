@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .calculator {
+      background: #ffffff;
+      width: 320px;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    .display {
+      width: 100%;
+      height: 70px;
+      background: #f3f4f6;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      padding: 15px;
+      font-size: 28px;
+      text-align: right;
+      overflow-x: auto;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    button {
+      padding: 18px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: #e5e7eb;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #d1d5db;
+    }
+
+    .operator {
+      background: #6366f1;
+      color: white;
+    }
+
+    .operator:hover {
+      background: #4f46e5;
+    }
+
+    .equal {
+      grid-column: span 2;
+      background: #22c55e;
+      color: white;
+    }
+
+    .equal:hover {
+      background: #16a34a;
+    }
+
+    .clear {
+      background: #ef4444;
+      color: white;
+    }
+
+    .clear:hover {
+      background: #dc2626;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="display" id="display">0</div>
+
+    <div class="buttons">
+      <button class="clear">C</button>
+      <button>DEL</button>
+      <button>%</button>
+      <button class="operator">÷</button>
+
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="operator">×</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="operator">−</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="operator">+</button>
+
+      <button>0</button>
+      <button>.</button>
+      <button class="equal">=</button>
+    </div>
+  </div>
+
+  <script>
+    const display = document.getElementById("display");
+    const buttons = document.querySelectorAll("button");
+
+    let currentInput = "";
+    let operatorUsed = false;
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const value = button.textContent;
+
+        if (value === "C") {
+          currentInput = "";
+          display.textContent = "0";
+          operatorUsed = false;
+          return;
+        }
+
+        if (value === "DEL") {
+          currentInput = currentInput.slice(0, -1);
+          display.textContent = currentInput || "0";
+          return;
+        }
+
+        if (value === "=") {
+          try {
+            currentInput = currentInput
+              .replace(/×/g, "*")
+              .replace(/÷/g, "/")
+              .replace(/−/g, "-");
+
+            currentInput = eval(currentInput).toString();
+            display.textContent = currentInput;
+            operatorUsed = false;
+          } catch {
+            display.textContent = "Error";
+            currentInput = "";
+          }
+          return;
+        }
+
+        if (["+", "−", "×", "÷", "%"].includes(value)) {
+          if (operatorUsed) return;
+          operatorUsed = true;
+        } else {
+          operatorUsed = false;
+        }
+
+        currentInput += value;
+        display.textContent = currentInput;
+      });
+    });
+  </script>
+
+</body>
+</html>

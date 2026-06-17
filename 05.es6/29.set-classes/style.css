@@ -1,0 +1,17 @@
+.light{
+    background-color: yellow;
+    color: black;
+}
+
+.dark{
+    background-color: black;
+    color: yellow;
+}
+
+.light-btn, .transparent-btn{
+    display: none;
+}
+
+.my-class{
+    color: red;
+}

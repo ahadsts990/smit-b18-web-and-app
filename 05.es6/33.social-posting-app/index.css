@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: 'Jost';
+    outline: none;
+}
+
+body{
+    background-image: url("./assets/background-pattern.png");
+    background-size: 400px;
+}
+
+h1{
+    text-align: center;
+    color: #0099ff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+    border: 1px solid #0099ff;
+    border-radius: 12px;
+    width: 200px;
+    padding: 1em 2em;
+    /* background-color: white; */
+}
+
+legend{
+    color: #373737;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+form button{
+    width: 100%;
+}
+
+form a{
+    width: 100%;
+    font-size: 0.8em;
+    text-align: left;
+    color: #0099ff;
+}
+
+button{
+    cursor: pointer;
+    background-color: #0099ff;
+    border: 0;
+    border-radius: 8px;
+    padding: 4px 16px;
+    color: white;
+}
+
+input, textarea{
+    width: 100%;
+    border: 1px solid #0099ff;
+    border-radius: 8px;
+    padding: 4px 8px;
+    resize: none;
+}
+
+input:focus, textarea:focus{
+    box-shadow: 0px 0px 2px #0099ff;
+}
+
+input::placeholder, textarea::placeholder{
+    color: #a6a6a6;
+}

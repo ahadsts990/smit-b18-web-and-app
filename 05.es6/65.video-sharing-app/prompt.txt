@@ -1,0 +1,69 @@
+i am going to create a video sharing platform, here are the main features
+signup,login, logout, edit profile, view my profile, view his channel(profile), 
+
+upload video
+delete, edit videos
+search videos
+add thumbnail to video
+video status.. private public
+view my uploaded videos
+others can like, comment, share
+video will contain title, description, thumbnail, views
+
+users can also follow channel
+user can view total followers on his channel
+view proper analytics of video, views, likes, comments
+
+make it on html, css, javascript, local storage
+give me proper folder structure and code as well
+
+data_set
+
+users = [
+  {
+    id,
+    username,
+    email,
+    password,
+    followers: [],
+    following: [],
+    videos: []
+  }
+]
+
+videos = [
+  {
+    id,
+    userId,
+    title,
+    description,
+    thumbnail,
+    videoUrl, // simulated (text)
+    views,
+    likes: [],
+    comments: [],
+    status: "public" | "private",
+    createdAt
+  }
+]
+
+currentUser = { userId }
+
+
+
+video unlike not working
+like comment, edit and delete comment
+no username with comment
+share option (copy link)
+video time when uploaded
+after uploading video, it is not redirecting to homepage
+private video is showing on homepage
+analytics is showing 2 times
+i cant edit my profile
+i cant edit or delete my video
+
+video public provate issue
+how to follow anf unfollow channel
+channel details with video
+video thumbnail issue
+

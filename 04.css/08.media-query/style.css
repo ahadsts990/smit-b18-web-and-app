@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: 100%;
+    height: 400px;
+    background-color: orange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+h1{
+    color: red;
+}
+
+/* max width means==> 400px sy kam */
+@media(max-width: 400px){
+    .container{
+        background-color: green;
+        border-radius: 100%;
+    }
+    h1{
+        color: white;
+    }
+}
+
+/* min width means==> 500px sy bara */
+@media(min-width: 500px){
+    .container{
+        background-color: blue;
+        border-radius: 20%;
+    }
+    h1{
+        color: yellow;
+    }
+}
+
+@media(min-width: 600px){
+    .container{
+        background-color: rgb(163, 188, 21);
+        border-radius: 20%;
+    }
+    h1{
+        color: rgb(79, 79, 9);
+    }
+}

@@ -1,0 +1,18 @@
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.output{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    background-color: orange;
+}
+
+.output div{
+    background-color: rgb(205, 106, 106);
+    padding: 8px;
+}

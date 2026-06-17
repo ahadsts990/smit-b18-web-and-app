@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>For Loop | Table Printer</h1>
+
+    <form onsubmit="print_table(event)">
+        <input type="number" placeholder="enter start position" class="start" />
+        <input type="number" placeholder="enter end position" class="end" />
+        <input type="number" placeholder="which table you want" class="table" />
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script src="./main.mjs"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSONPlaceholder Products</title>
+
+  <!-- GSAP + ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      opacity: 0; /* start hidden */
+      transform: translateY(100px); /* start below */
+    }
+
+    .card img {
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .title {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      height: 50px;
+      overflow: hidden;
+    }
+
+    .id {
+      color: #555;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      margin-top: auto;
+      padding: 10px;
+      border: none;
+      background: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+<header>JSONPlaceholder Cards (GSAP Scroll Animation)</header>
+
+<div class="container" id="productContainer"></div>
+
+<script>
+  gsap.registerPlugin(ScrollTrigger);
+
+  const container = document.getElementById('productContainer');
+
+  fetch('https://jsonplaceholder.typicode.com/photos?_limit=20')
+    .then(res => res.json())
+    .then(data => {
+      data.forEach((item, index) => {
+        const card = document.createElement('div');
+        card.classList.add('card');
+
+        card.innerHTML = `
+          <img src="${item.thumbnailUrl}" alt="${item.title}">
+          <div class="title">${item.title}</div>
+          <div class="id">Product ID: ${item.id}</div>
+          <button class="btn">View</button>
+        `;
+
+        container.appendChild(card);
+
+        // GSAP animation per card
+        gsap.to(card, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 85%",
+            end: "top 20%",
+          }
+        });
+      });
+    })
+    .catch(err => console.error(err));
+</script>
+
+</body>
+</html>

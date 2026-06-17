@@ -1,0 +1,74 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #91d3ff;
+    padding: 0.5em 1em;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+textarea {
+    height: 100px;
+}
+
+.output {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.single-post {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border: 2px dashed #0099ff;
+}
+
+.post-btns {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.post-btns button {
+    background-color: transparent;
+    color: #0099ff;
+    border: 1px solid #0099ff;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+h2,
+h3,
+h4,
+p {
+    margin: 0;
+    word-break: break-all;
+}
+
+h3 {
+    font-size: 0.8em;
+    color: #5e5e5e;
+    text-align: right;
+    text-transform: capitalize;
+}
+
+button.liked-post{
+    background-color: #0099ff;
+    color: white;
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}

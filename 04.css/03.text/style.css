@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-size: 12px;
+}
+
+#head1{
+    
+}
+
+#head2{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#head3{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#head4{
+    font-family: "Jost", sans-serif;
+}
+
+@font-face {
+    font-family: 'Bangers';
+    src: url('fonts/Bangers-Regular.ttf');
+}
+
+#head5{
+    font-family: "Bangers", sans-serif;
+}
+
+#head6{
+    font-family: "Bitcount Grid Single", system-ui;
+}
+
+@font-face {
+    font-family: 'Bilawal';
+    src: url('fonts/Redressed-Regular.ttf');
+}
+
+#head7{
+    font-family: "Bilawal", sans-serif;
+}
+
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-weight: bold;
+    font-weight: normal;
+    font-weight: 600;
+    
+    font-style: italic;
+    
+    text-transform: lowercase;
+    text-transform: capitalize;
+    text-transform: uppercase;
+    
+    text-decoration: line-through;
+    text-decoration: underline;
+    text-decoration: overline;
+    text-decoration: wavy;
+
+    line-height: 2em;
+    line-height: 2rem;
+    line-height: 18px;
+
+    word-spacing: 0.2em;
+    letter-spacing: 2px;
+
+    text-align: right;
+    text-align: center;
+    text-align: left;
+    text-align: justify;
+
+    text-indent: 3em;
+
+    text-shadow: 4px -6px 2px #424242e6;
+}
+
+p::first-letter{
+    color: violet;
+    font-size: 2em;
+}
+
+p:first-line{
+    color: orange;
+    font-size: 1.5em;
+}
+
+/* first word (custom logic) */
+#my-custom-word{
+ color: blue;   
+}
+
+/* jo maine visit nhi kia */
+a:link{
+    color: rgb(143, 143, 33);
+}
+
+a:visited{
+    color: rgb(6, 104, 44);
+}
+
+p:hover, a:hover{
+    text-decoration: underline;
+    color: red;
+}
+
+a:active{
+    color: rgb(162, 79, 27);
+}
+
+input[type="text"]{
+    background-color: yellow;
+}
+
+input[type="text"]:hover{
+    background-color: orange;
+}
+
+input[type="text"]:focus{
+    background-color: green;
+    color: white;
+}
+

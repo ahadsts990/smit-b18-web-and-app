@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <b class="email"></b>
+        <button class="logout-btn">Logout</button>
+    </header>
+
+    <h1>firebase CRUD</h1>
+
+    <form>
+        <input type="text" id="title" placeholder="enter title" />
+        <textarea id="description" placeholder="enter description"></textarea>
+        <button>Add</button>
+    </form>
+
+    <div class="result"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="../firebase.mjs" type="module"></script>
+    <script src="app.mjs" type="module"></script>
+
+</body>
+
+</html>
