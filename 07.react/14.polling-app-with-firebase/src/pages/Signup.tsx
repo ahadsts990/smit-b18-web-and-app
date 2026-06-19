@@ -11,9 +11,12 @@ import {
   GoogleAuthProvider,
   signInWithPopup
 } from "firebase/auth";
+import { login } from "../redux/states"
+import { useDispatch } from "react-redux"
 
 const Signup = () => {
   const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const [email, set_email] = useState("")
   const [password, set_password] = useState("")
@@ -39,7 +42,7 @@ const Signup = () => {
 
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
+      .then((userCredential: any) => {
         const user = userCredential.user;
         console.log(user)
         message.success("signup successfull")
@@ -56,9 +59,14 @@ const Signup = () => {
   const auth = getAuth();
   const googleLogin = () => {
     signInWithPopup(auth, provider)
-      .then((result) => {
+      .then((result: any) => {
         console.log(result)
         message.success("google login successfull")
+        const userData = {
+          email: result.user.email,
+          uid: result.user.uid,
+        }
+        dispatch(login(userData))
         navigate("/")
       }).catch((error) => {
         console.error(error)
