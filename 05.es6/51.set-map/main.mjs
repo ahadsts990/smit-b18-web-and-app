@@ -95,3 +95,59 @@ my_map.delete(33)
 // dont follow alphabetical order           || follow alphabetical order
 // array & objects are allowed as a key     || array & objects are not allowed as a key
 
+
+
+
+
+// new class
+
+const user = {
+    firstname: "uncle",
+    lastname: "john",
+    "687162jdlks": "some number",
+}
+
+// console.log(user)
+
+const usersMap = new Map()
+usersMap.set("firstname", "jumbo")
+usersMap.set("lastname", "dumbo")
+usersMap.set([1, 2, 3], ["hello", "some value"])
+usersMap.set([1, 2, 3, 4], "some value is new")
+usersMap.set({ gadget: "computer" }, "object is here new")
+// console.log(usersMap.size)
+
+const newObj = {
+    firstname: "hello"
+}
+
+// console.log(newObj.toString())
+
+// deep vs shallow copy
+
+const nestedObj = {
+    sarim: {
+        umer: {
+            mustafa: ""
+        }
+    }
+}
+
+// deep copy
+
+// {
+//     sarim: {
+//         umer: {
+//             mustafa: ""
+//         }
+//     }
+// }
+
+
+// shallow copy
+
+// {
+//     sarim: {
+        
+//     }
+// }
