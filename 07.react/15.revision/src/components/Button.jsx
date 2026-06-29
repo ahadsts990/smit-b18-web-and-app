@@ -6,4 +6,4 @@ const Button = ({ username }) => {
   )
 }
 
-export default Button
+export default Buttonw
