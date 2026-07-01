@@ -1,14 +1,30 @@
-.header{
+.header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5em 1em;
     border-bottom: 1px solid #dadada;
-    div{
+
+    div {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 1em;
+    }
+}
+
+.pollingForm {
+    padding: 1em;
+    // background-color: red;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    border: 1px solid #dadada;
+    border-radius: 1em;
+    margin: 1em;
+
+    .questionInput {
+        grid-column: span 2;
     }
 }

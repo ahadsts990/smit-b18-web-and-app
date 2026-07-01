@@ -79,6 +79,7 @@ const Signup = () => {
       <h2>Signup</h2>
       <AntdInput placeholder="Enter your email" type="email"
         onChange={(e: any) => set_email(e.target.value)}
+        value={email}
       />
       <PasswordInput placeholder="Enter your password"
         onChange={(e: any) => set_password(e.target.value)}

@@ -11,7 +11,6 @@ import { login, logout } from "./redux/states"
 const App = () => {
   // AUTH GUARD
   const isLogin = useSelector((state: any) => state.isLogin)
-  console.log(isLogin)
 
   const navigate = useNavigate()
   const dispatch = useDispatch()
@@ -43,7 +42,19 @@ const App = () => {
     <Routes>
       {
         (isLogin == null) ?
-          <Route path="*" element={<span className="loader"></span>} />
+          <Route path="*" element={<>
+            <div
+              style={{
+                width: "100vw",
+                height: "100vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <span className="loader"></span>
+            </div>
+          </>} />
           : null
       }
       {
